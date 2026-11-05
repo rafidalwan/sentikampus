@@ -1,0 +1,21 @@
+services:
+  backend:
+    build:
+      context: ./deployment-cloud
+      dockerfile: Dockerfile
+    container_name: sentikampus-api
+    ports:
+      - "8080:8080"
+      - "8000:8000"
+    volumes:
+      - ./backend/models:/app/models
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sentikampus-web
+    ports:
+      - "8501:8501"
+    depends_on:
+      - backend
