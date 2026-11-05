@@ -1,0 +1,14 @@
+frontend/
+deployment-cloud/
+training_samples.csv
+app.py
+compose.yaml
+Dockerfile
+verify_checkpoint.py
+backend/train_model.py
+backend/models/sentiment_backup.pkl
+backend/models/sentiment_lama.pkl
+*.log
+*.png
+.git/
+.gitignore
